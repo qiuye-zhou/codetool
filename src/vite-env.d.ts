@@ -21,10 +21,7 @@ declare const chrome: {
     remove(_itemId: string, _callback?: () => void): void
     onClicked: {
       addListener(
-        _callback: (
-          _info: { menuItemId: string },
-          _tab: unknown,
-        ) => void,
+        _callback: (_info: { menuItemId: string }, _tab: unknown) => void,
       ): void
     }
   }

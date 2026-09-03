@@ -20,8 +20,7 @@ const result = computed(() => {
   const src = input.value
   if (!src) return { out: '', err: '' }
   try {
-    const out =
-      mode.value === 'encode' ? props.encode(src) : props.decode(src)
+    const out = mode.value === 'encode' ? props.encode(src) : props.decode(src)
     return { out, err: '' }
   } catch (e) {
     return { out: '', err: (e as Error).message }
@@ -83,7 +82,9 @@ function onKeydown(e: KeyboardEvent) {
   <div class="h-full flex flex-col" @keydown="onKeydown">
     <slot name="options" />
 
-    <div class="flex-1 min-h-0 grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-2 p-3">
+    <div
+      class="flex-1 min-h-0 grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-2 p-3"
+    >
       <!-- 输入区 -->
       <div class="flex flex-col min-h-0">
         <div
@@ -157,7 +158,9 @@ function onKeydown(e: KeyboardEvent) {
 
         <button
           class="p-2 rounded-md hover:bg-slate-200 dark:hover:bg-slate-700 transition cursor-pointer"
-          :class="copied ? 'text-green-500' : 'text-slate-500 dark:text-slate-300'"
+          :class="
+            copied ? 'text-green-500' : 'text-slate-500 dark:text-slate-300'
+          "
           title="复制输出 (Ctrl+Shift+C)"
           @click="copyOutput"
         >
@@ -206,7 +209,9 @@ function onKeydown(e: KeyboardEvent) {
             stroke-linejoin="round"
           >
             <path d="M3 6h18" />
-            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+            <path
+              d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+            />
           </svg>
         </button>
       </div>

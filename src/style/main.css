@@ -17,15 +17,22 @@ body,
 }
 
 body {
-  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, 'PingFang SC',
-    'Microsoft YaHei', sans-serif;
+  font-family:
+    'Inter',
+    'Segoe UI',
+    system-ui,
+    -apple-system,
+    'PingFang SC',
+    'Microsoft YaHei',
+    sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
 /* 等宽字体用于输入输出区 */
 .font-mono-code {
-  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas',
-    'Courier New', monospace;
+  font-family:
+    'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', 'Courier New',
+    monospace;
 }
 
 /* 全局滚动条样式 */

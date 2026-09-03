@@ -42,7 +42,9 @@ async function copy(text: string, e?: MouseEvent) {
   <div class="h-full flex flex-col p-3 gap-2">
     <!-- 输入区 -->
     <div class="flex flex-col gap-1">
-      <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+      <div
+        class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400"
+      >
         <span>JWT Token</span>
         <button
           class="text-blue-600 dark:text-blue-400 hover:underline"
@@ -90,7 +92,10 @@ async function copy(text: string, e?: MouseEvent) {
           class="flex items-center justify-between px-3 py-1.5 text-xs font-medium bg-slate-100 dark:bg-slate-700/50"
         >
           <span>Header</span>
-          <button class="text-blue-600 dark:text-blue-400 hover:underline" @click="(e) => copy(decoded.data!.header.json, e)">
+          <button
+            class="text-blue-600 dark:text-blue-400 hover:underline"
+            @click="(e) => copy(decoded.data!.header.json, e)"
+          >
             复制
           </button>
         </div>
@@ -108,7 +113,10 @@ async function copy(text: string, e?: MouseEvent) {
           class="flex items-center justify-between px-3 py-1.5 text-xs font-medium bg-slate-100 dark:bg-slate-700/50"
         >
           <span>Payload</span>
-          <button class="text-blue-600 dark:text-blue-400 hover:underline" @click="(e) => copy(decoded.data!.payload.json, e)">
+          <button
+            class="text-blue-600 dark:text-blue-400 hover:underline"
+            @click="(e) => copy(decoded.data!.payload.json, e)"
+          >
             复制
           </button>
         </div>
@@ -126,12 +134,19 @@ async function copy(text: string, e?: MouseEvent) {
           class="flex items-center justify-between px-3 py-1.5 text-xs font-medium bg-slate-100 dark:bg-slate-700/50"
         >
           <span>Signature（Hex）</span>
-          <button class="text-blue-600 dark:text-blue-400 hover:underline" @click="(e) => copy(decoded.data!.signature, e)">
+          <button
+            class="text-blue-600 dark:text-blue-400 hover:underline"
+            @click="(e) => copy(decoded.data!.signature, e)"
+          >
             复制
           </button>
         </div>
-        <div class="px-3 py-2 flex flex-wrap items-center gap-x-6 gap-y-1 text-xs">
-          <code class="font-mono-code text-slate-700 dark:text-slate-200 break-all">
+        <div
+          class="px-3 py-2 flex flex-wrap items-center gap-x-6 gap-y-1 text-xs"
+        >
+          <code
+            class="font-mono-code text-slate-700 dark:text-slate-200 break-all"
+          >
             {{ decoded.data.signature || '（无签名段）' }}
           </code>
           <span

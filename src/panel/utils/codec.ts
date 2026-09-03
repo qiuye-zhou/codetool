@@ -114,7 +114,10 @@ const NAMED_ENTITIES: Record<string, string> = {
 
 export type HtmlEncodeMode = 'named' | 'numeric'
 
-export function htmlEncode(str: string, mode: HtmlEncodeMode = 'named'): string {
+export function htmlEncode(
+  str: string,
+  mode: HtmlEncodeMode = 'named',
+): string {
   let out = ''
   for (const ch of str) {
     if (mode === 'numeric') {

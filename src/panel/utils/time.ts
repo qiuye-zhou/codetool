@@ -1,10 +1,6 @@
 // 时间戳 / Date / Unix 时间互转
 
-export type DetectedKind =
-  | 'unix-seconds'
-  | 'unix-ms'
-  | 'date'
-  | 'unknown'
+export type DetectedKind = 'unix-seconds' | 'unix-ms' | 'date' | 'unknown'
 
 export interface TimeInfo {
   detected: DetectedKind
@@ -38,8 +34,7 @@ export function relativeFromNow(d: Date): string {
   if (abs < 60_000) return `${Math.round(abs / 1000)} 秒${suffix}`
   if (abs < 3_600_000)
     return `${Math.floor(abs / 60_000)} 分 ${Math.round((abs % 60_000) / 1000)} 秒${suffix}`
-  if (abs < 86_400_000)
-    return `${Math.floor(abs / 3_600_000)} 小时${suffix}`
+  if (abs < 86_400_000) return `${Math.floor(abs / 3_600_000)} 小时${suffix}`
   return `${Math.floor(abs / 86_400_000)} 天${suffix}`
 }
 

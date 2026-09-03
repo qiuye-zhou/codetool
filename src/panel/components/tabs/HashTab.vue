@@ -48,7 +48,9 @@ async function copy(text: string, e: MouseEvent) {
     </div>
 
     <!-- 结果 -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 max-h-[45%] overflow-auto">
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 gap-2 max-h-[45%] overflow-auto"
+    >
       <div
         v-for="algo in HASH_ALGOS"
         :key="algo.algo"
@@ -57,7 +59,10 @@ async function copy(text: string, e: MouseEvent) {
         <div
           class="flex items-center justify-between px-3 py-1.5 text-xs font-medium bg-slate-100 dark:bg-slate-700/50"
         >
-          <span>{{ algo.label }} <span class="text-slate-400">/{{ algo.bitLength }}</span></span>
+          <span
+            >{{ algo.label }}
+            <span class="text-slate-400">/{{ algo.bitLength }}</span></span
+          >
           <button
             class="text-blue-600 dark:text-blue-400 hover:underline disabled:opacity-30 cursor-pointer"
             :disabled="!results[algo.algo]"

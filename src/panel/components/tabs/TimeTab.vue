@@ -94,15 +94,14 @@ function useNow() {
       </span>
     </div>
 
-    <div
-      v-if="info.error"
-      class="text-xs text-red-500 dark:text-red-400"
-    >
+    <div v-if="info.error" class="text-xs text-red-500 dark:text-red-400">
       {{ info.error }}
     </div>
 
     <!-- 结果卡片 -->
-    <div class="flex-1 min-h-0 overflow-auto grid grid-cols-1 sm:grid-cols-2 gap-2">
+    <div
+      class="flex-1 min-h-0 overflow-auto grid grid-cols-1 sm:grid-cols-2 gap-2"
+    >
       <div
         v-for="row in ROWS"
         :key="row.label"

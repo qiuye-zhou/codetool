@@ -50,9 +50,7 @@ async function copy(text: string, e: MouseEvent) {
 
 <template>
   <div class="h-full flex flex-col p-3 gap-2">
-    <div
-      class="text-xs text-slate-500 dark:text-slate-400"
-    >
+    <div class="text-xs text-slate-500 dark:text-slate-400">
       在任意一个框中输入数字，其它进制自动同步（任意精度，支持负数）。
     </div>
 

@@ -1,5 +1,12 @@
 ﻿<script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted, watch, defineAsyncComponent } from 'vue'
+import {
+  ref,
+  computed,
+  onMounted,
+  onUnmounted,
+  watch,
+  defineAsyncComponent,
+} from 'vue'
 
 import TabBar from './components/TabBar.vue'
 
@@ -8,12 +15,16 @@ const tabs = [
   {
     id: 'base64',
     label: 'Base64',
-    component: defineAsyncComponent(() => import('./components/tabs/Base64Tab.vue')),
+    component: defineAsyncComponent(
+      () => import('./components/tabs/Base64Tab.vue'),
+    ),
   },
   {
     id: 'url',
     label: 'URL',
-    component: defineAsyncComponent(() => import('./components/tabs/UrlTab.vue')),
+    component: defineAsyncComponent(
+      () => import('./components/tabs/UrlTab.vue'),
+    ),
   },
   {
     id: 'unicode',
@@ -32,22 +43,30 @@ const tabs = [
   {
     id: 'hex',
     label: 'Hex',
-    component: defineAsyncComponent(() => import('./components/tabs/HexTab.vue')),
+    component: defineAsyncComponent(
+      () => import('./components/tabs/HexTab.vue'),
+    ),
   },
   {
     id: 'jwt',
     label: 'JWT 解析',
-    component: defineAsyncComponent(() => import('./components/tabs/JwtTab.vue')),
+    component: defineAsyncComponent(
+      () => import('./components/tabs/JwtTab.vue'),
+    ),
   },
   {
     id: 'time',
     label: '时间戳',
-    component: defineAsyncComponent(() => import('./components/tabs/TimeTab.vue')),
+    component: defineAsyncComponent(
+      () => import('./components/tabs/TimeTab.vue'),
+    ),
   },
   {
     id: 'hash',
     label: 'Hash 加密',
-    component: defineAsyncComponent(() => import('./components/tabs/HashTab.vue')),
+    component: defineAsyncComponent(
+      () => import('./components/tabs/HashTab.vue'),
+    ),
   },
   {
     id: 'radix',
@@ -102,7 +121,7 @@ onUnmounted(() => {
 function onKeydown(e: KeyboardEvent) {
   if (e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey) {
     const idx = parseInt(e.key, 10)
-    if (idx >= 1  && idx <= tabs.length) {
+    if (idx >= 1 && idx <= tabs.length) {
       e.preventDefault()
       const targetTab = tabs[idx - 1]!
       selectTab(targetTab.id)

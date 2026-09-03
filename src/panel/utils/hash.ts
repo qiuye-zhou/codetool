@@ -25,7 +25,9 @@ export const HASH_ALGOS: HashAlgoInfo[] = [
 ]
 
 export function hash(algo: HashAlgo, input: string): string {
-  const fn = (CryptoJS as unknown as Record<string, (s: string) => CryptoJS.lib.WordArray>)[algo]
+  const fn = (
+    CryptoJS as unknown as Record<string, (s: string) => CryptoJS.lib.WordArray>
+  )[algo]
   if (typeof fn !== 'function') {
     throw new Error(`不支持的算法: ${algo}`)
   }
