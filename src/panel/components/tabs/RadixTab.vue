@@ -85,7 +85,7 @@ async function copy(text: string, e: MouseEvent) {
         >
           <span>{{ f.label }}</span>
           <button
-            class="text-blue-600 dark:text-blue-400 hover:underline disabled:opacity-30"
+            class="text-blue-600 dark:text-blue-400 hover:underline disabled:opacity-30 cursor-pointer"
             :disabled="!values[f.base]"
             @click="(e) => copy(values[f.base], e)"
           >

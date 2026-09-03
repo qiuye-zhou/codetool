@@ -136,11 +136,8 @@ function onKeydown(e: KeyboardEvent) {
         </div>
       </div>
       <div class="flex-1" />
-      <span class="text-[11px] text-slate-400 hidden sm:block">
-        右键页面 → 打开编码工具面板
-      </span>
       <button
-        class="p-1.5 rounded-md hover:bg-slate-200 dark:hover:bg-slate-700 transition"
+        class="p-1.5 rounded-md hover:bg-slate-200 dark:hover:bg-slate-700 transition cursor-pointer"
         :title="isDark ? '切换浅色 (Ctrl+Shift+D)' : '切换深色 (Ctrl+Shift+D)'"
         @click="toggleTheme"
       >

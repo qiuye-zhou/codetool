@@ -59,7 +59,7 @@ async function copy(text: string, e: MouseEvent) {
         >
           <span>{{ algo.label }} <span class="text-slate-400">/{{ algo.bitLength }}</span></span>
           <button
-            class="text-blue-600 dark:text-blue-400 hover:underline disabled:opacity-30"
+            class="text-blue-600 dark:text-blue-400 hover:underline disabled:opacity-30 cursor-pointer"
             :disabled="!results[algo.algo]"
             @click="(e) => copy(results[algo.algo], e)"
           >

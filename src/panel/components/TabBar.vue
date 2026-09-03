@@ -14,7 +14,7 @@ const emit = defineEmits<{ (e: 'select', id: string): void }>()
     <button
       v-for="t in tabs"
       :key="t.id"
-      class="relative px-3 my-1.5 rounded-md text-xs font-medium whitespace-nowrap transition-colors flex items-center"
+      class="relative px-3 my-1.5 rounded-md text-xs font-medium whitespace-nowrap transition-colors flex items-center cursor-pointer"
       :class="
         t.id === activeId
           ? 'bg-blue-500 text-white shadow-sm'

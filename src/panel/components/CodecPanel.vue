@@ -108,7 +108,7 @@ function onKeydown(e: KeyboardEvent) {
           class="flex md:flex-col items-center gap-1 p-1 rounded-lg bg-slate-100 dark:bg-slate-700/60"
         >
           <button
-            class="px-3 py-1.5 rounded-md text-xs font-medium transition"
+            class="px-3 py-1.5 rounded-md text-xs font-medium transition cursor-pointer"
             :class="
               mode === 'encode'
                 ? 'bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-300 shadow-sm'
@@ -120,7 +120,7 @@ function onKeydown(e: KeyboardEvent) {
             {{ encodeLabel || '编码' }}
           </button>
           <button
-            class="px-3 py-1.5 rounded-md text-xs font-medium transition"
+            class="px-3 py-1.5 rounded-md text-xs font-medium transition cursor-pointer"
             :class="
               mode === 'decode'
                 ? 'bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-300 shadow-sm'
@@ -134,7 +134,7 @@ function onKeydown(e: KeyboardEvent) {
         </div>
 
         <button
-          class="p-2 rounded-md text-slate-500 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition"
+          class="p-2 rounded-md text-slate-500 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition cursor-pointer"
           title="交换输入输出 (Ctrl+Shift+S)"
           @click="swap"
         >
@@ -156,7 +156,7 @@ function onKeydown(e: KeyboardEvent) {
         </button>
 
         <button
-          class="p-2 rounded-md hover:bg-slate-200 dark:hover:bg-slate-700 transition"
+          class="p-2 rounded-md hover:bg-slate-200 dark:hover:bg-slate-700 transition cursor-pointer"
           :class="copied ? 'text-green-500' : 'text-slate-500 dark:text-slate-300'"
           title="复制输出 (Ctrl+Shift+C)"
           @click="copyOutput"
@@ -191,7 +191,7 @@ function onKeydown(e: KeyboardEvent) {
         </button>
 
         <button
-          class="p-2 rounded-md text-slate-500 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition"
+          class="p-2 rounded-md text-slate-500 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition cursor-pointer"
           title="清空 (Ctrl+Shift+L)"
           @click="clearAll"
         >
