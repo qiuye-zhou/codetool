@@ -67,7 +67,7 @@ async function copy(text: string, e: MouseEvent) {
           </button>
         </div>
         <code
-          class="px-3 py-1.5 text-xs font-mono-code text-slate-700 dark:text-slate-200 break-all min-h-[2.5rem] flex items-center"
+          class="px-3 py-1.5 text-xs font-mono-code text-slate-700 dark:text-slate-200 break-all min-h-10 flex items-center"
         >
           {{ results[algo.algo] || '—' }}
         </code>

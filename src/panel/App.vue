@@ -63,7 +63,7 @@ const savedTab = localStorage.getItem('codetool:tab') || 'base64'
 const activeId = ref(tabs.some((t) => t.id === savedTab) ? savedTab : 'base64')
 
 const current = computed(
-  () => tabs.find((t) => t.id === activeId.value) ?? tabs[0],
+  () => tabs.find((t) => t.id === activeId.value) ?? tabs[0]!,
 )
 
 function selectTab(id: string) {
@@ -102,9 +102,10 @@ onUnmounted(() => {
 function onKeydown(e: KeyboardEvent) {
   if (e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey) {
     const idx = parseInt(e.key, 10)
-    if (idx >= 1 && idx <= tabs.length) {
+    if (idx >= 1  && idx <= tabs.length) {
       e.preventDefault()
-      selectTab(tabs[idx - 1].id)
+      const targetTab = tabs[idx - 1]!
+      selectTab(targetTab.id)
       return
     }
   }
@@ -125,7 +126,7 @@ function onKeydown(e: KeyboardEvent) {
     >
       <div class="flex items-center gap-2">
         <div
-          class="w-7 h-7 rounded-lg bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white text-xs font-bold font-mono-code shadow"
+          class="w-7 h-7 rounded-lg bg-linear-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white text-xs font-bold font-mono-code shadow"
         >
           &lt;/&gt;
         </div>

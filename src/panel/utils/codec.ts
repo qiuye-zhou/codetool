@@ -78,16 +78,23 @@ export function unicodeDecode(str: string): string {
   while ((m = re.exec(str)) !== null) {
     result += str.slice(last, m.index)
     let cp: number
-    if (m[1] != null) cp = parseInt(m[1], 16)
-    else if (m[2] != null) cp = parseInt(m[2], 16)
-    else if (m[3] != null) cp = parseInt(m[3], 16)
-    else cp = parseInt(m[4], 8)
+    if (m[1] != null) {
+      cp = parseInt(m[1], 16)
+    } else if (m[2] != null) {
+      cp = parseInt(m[2], 16)
+    } else if (m[3] != null) {
+      cp = parseInt(m[3], 16)
+    } else if (m[4] != null) {
+      cp = parseInt(m[4], 8)
+    } else {
+      // 理论上不会走到这里，但为了类型安全
+      continue
+    }
     result += String.fromCodePoint(cp)
     last = re.lastIndex
   }
   result += str.slice(last)
   if (result === '' && str.trim() !== '') {
-    // 没有匹配到任何转义序列，原样返回
     return str
   }
   return result
