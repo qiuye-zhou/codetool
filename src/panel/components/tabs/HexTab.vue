@@ -17,8 +17,8 @@ const decoder = (s: string) => hexDecode(s)
   <CodecPanel
     :encode="encoder"
     :decode="decoder"
-    encode-label="转 Hex →"
-    decode-label="← 转文本"
+    encode-label="转 Hex"
+    decode-label="转文本"
     input-placeholder="输入文本或十六进制字符串..."
     output-placeholder="十六进制结果（UTF-8）..."
   >

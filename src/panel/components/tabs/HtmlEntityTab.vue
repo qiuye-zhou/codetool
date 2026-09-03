@@ -12,8 +12,8 @@ const decoder = (s: string) => htmlDecode(s)
   <CodecPanel
     :encode="encoder"
     :decode="decoder"
-    encode-label="编码 →"
-    decode-label="← 解码"
+    encode-label="编码"
+    decode-label="解码"
     input-placeholder="输入文本或 HTML 实体字符串..."
     output-placeholder="HTML 实体结果..."
   >

@@ -117,7 +117,7 @@ function onKeydown(e: KeyboardEvent) {
             :title="encodeLabel || '编码 (Ctrl+Enter)'"
             @click="setMode('encode')"
           >
-            {{ encodeLabel || '编码 →' }}
+            {{ encodeLabel || '编码' }}
           </button>
           <button
             class="px-3 py-1.5 rounded-md text-xs font-medium transition"
@@ -129,7 +129,7 @@ function onKeydown(e: KeyboardEvent) {
             :title="decodeLabel || '解码 (Ctrl+Shift+Enter)'"
             @click="setMode('decode')"
           >
-            {{ decodeLabel || '← 解码' }}
+            {{ decodeLabel || '解码' }}
           </button>
         </div>
 
