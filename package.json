@@ -3,7 +3,7 @@
   "displayName": "CodeTool 编码工具",
   "private": true,
   "version": "0.1.0",
-  "description": "浏览器编解码工具在任意界面右键选择打开面板(支持Base64/URL/Unicode/HTML实体/Hex/JWT/时间戳/Hash/进制转换)",
+  "description": "浏览器扩展，在任意页面通过右键菜单或工具栏图标打开独立工具面板，集中提供开发中常用的编码解码、格式转换和校验能力",
   "type": "module",
   "scripts": {
     "build": "cross-env NODE_ENV=production run-s clear build:web build:prepare",
